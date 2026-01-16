@@ -1,7 +1,4 @@
-# =========================
-# 1. Build Angular SSR
-# =========================
-FROM node:20 AS build
+FROM node:20
 
 WORKDIR /app
 
@@ -10,20 +7,8 @@ RUN npm install
 
 COPY . .
 
-# This creates dist/<project>/browser and dist/<project>/server
-RUN npm run build --omit=dev
+RUN npm run build
 
-# =========================
-# 2. Run SSR server
-# =========================
-FROM node:20 AS runner
+EXPOSE 3000
 
-WORKDIR /app
-
-# IMPORTANT: copy only the dist output
-# Replace "barcodepro-angular" with your Angular project name if different
-COPY --from=build /app/dist/barcodepro-angular ./dist
-
-EXPOSE 4000
-
-CMD ["node", "dist/server/server.mjs"]
+CMD ["npx", "serve", "-s", "dist/<project-name>/browser", "-l", "3000"]
