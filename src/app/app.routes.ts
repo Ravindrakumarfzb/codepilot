@@ -12,6 +12,11 @@ export const routes: Routes = [
       import('./components/hero/hero').then(m => m.Hero),
   },
   {
+    path: 'generator',
+    loadComponent: () =>
+      import('./components/generator/generator').then(m => m.Generator),
+  },
+  {
     path: 'pricing',
     loadComponent: () =>
       import('./components/pricing/pricing').then(m => m.Pricing),
