@@ -1,0 +1,85 @@
+/* Overall page container */
+.barcode-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading */
+.barcode-container h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Input and Select Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Shared input styles */
+input, select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.25s ease;
+  background: #fafafa;
+}
+
+input:focus,
+select:focus {
+  border-color: #4b8bff;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(75, 139, 255, 0.15);
+}
+
+/* Modern Gradient Button */
+.btn-generate {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4b8bff, #005eff);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-generate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 94, 255, 0.25);
+}
+
+/* Barcode Preview Box */
+.barcode-preview {
+  text-align: center;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f7f9fc;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

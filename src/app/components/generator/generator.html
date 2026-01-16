@@ -1,0 +1,21 @@
+<section id="generator" class="container barcode-container">
+  <h2>Barcode Generator</h2>
+
+  <div class="form-group">
+    <input [(ngModel)]="code" placeholder="Enter Product Code">
+  </div>
+
+  <div class="form-group">
+    <select [(ngModel)]="type">
+      <option value="CODE128">CODE128</option>
+      <option value="EAN13">EAN13</option>
+      <option value="UPC">UPC</option>
+    </select>
+  </div>
+
+  <button class="btn-generate" (click)="generate()">Generate</button>
+
+  <div class="barcode-preview">
+    <svg id="barcode"></svg>
+  </div>
+</section>

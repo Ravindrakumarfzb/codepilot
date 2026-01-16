@@ -1,0 +1,57 @@
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <!-- <img src="img/logo.webp" alt=""> -->
+      <h1 class="sitename">CodePilot</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="javascript:void(0)" routerLink="/" class="active">Home</a></li>
+        <li><a href="javascript:void(0)" routerLink="/aboutus">About</a></li>
+        <li><a href="javascript:void(0)" routerLink="/features">Services</a></li>
+        <li><a href="javascript:void(0)" routerLink="/team">Team</a></li>
+        <li><a href="javascript:void(0)" routerLink="/pricing">Pricing</a></li>
+        <li><a href="javascript:void(0)" routerLink="/blog">Blog</a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)">
+            <span>More</span> 
+            <i class="bi bi-chevron-down toggle-dropdown"></i>
+          </a>
+          <ul>
+            <li><a href="javascript:void(0)">FAQ</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">
+                <span>Resources</span> 
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul>
+                <li><a href="javascript:void(0)">How Barcodes Work</a></li>
+                <li><a href="javascript:void(0)">Barcode Types</a></li>
+                <li><a href="javascript:void(0)">Printing Guidelines</a></li>
+                <li><a href="javascript:void(0)">Retail Barcode Requirements</a></li>
+                <li><a href="javascript:void(0)">Amazon/Flipkart Guidelines</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+            <li><a href="javascript:void(0)">Privacy Policy</a></li>
+            <li><a href="javascript:void(0)">Help Center</a></li>
+          </ul>
+        </li>
+
+        <li><a href="javascript:void(0)" routerLink="/contactus">Contact</a></li>
+      </ul>
+
+      <i class="mobile-nav-toggle d-xl-none bi"
+         [ngClass]="isMobileNavOpen ? 'bi-x' : 'bi-list'"
+         (click)="toggleMobileNav()">
+      </i>
+
+    </nav>
+
+    <a class="btn-getstarted" href="javascript:void(0)">Buy Barcodes</a>
+
+  </div>
+</header>

@@ -1,0 +1,27 @@
+<app-header />
+
+<main class="main">
+
+  <!-- Load HOME PAGE components -->
+   @if (isHomePage) {
+  <div >
+    <app-hero></app-hero>
+    <app-about></app-about>
+    <app-features></app-features>
+    <app-team></app-team>
+    <app-pricing></app-pricing>
+    <app-blog></app-blog>
+    <app-contactus></app-contactus>
+  </div>
+}
+  <!-- Load routed pages -->
+   @if (!isHomePage) {
+  <div >
+    <router-outlet></router-outlet>
+  </div>
+}
+</main>
+
+<footer class="footer">
+  <app-footer />
+</footer>
